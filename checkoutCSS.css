@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    color: #228B22; /* Forest Green */
+    background-image: url('plant2.gif'); /* Correct syntax for background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: transparent;
+    color: #228B22;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; /* Center the logo */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    font-size: 35px;
+}
+
+nav ul li a {
+    color: #228B22;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #2d5675;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.7); /* More transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* For confetti positioning */
+    overflow: hidden; /* Prevents confetti from going outside */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.cart-item-title {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    color: #888;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-quantity input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-item-quantity button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item-quantity button:hover {
+    background-color: #196619;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #228B22;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #196619;
+}
+
+.credit-card-form {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.credit-card-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.credit-card-form button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+.credit-card-form button:hover {
+    background-color: #196619;
+}
+
+.thank-you-message {
+    display: none; /* Hidden by default */
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: green; /* Green color for confetti */
+    border-radius: 50%;
+    pointer-events: none; /* Allows clicks to pass through */
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+footer {
+    background-color: transparent;
+    color: #228B22;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    border-radius: 50%; /* Make the icons circular */
+    overflow: hidden;
+}
+
+.social-icons img {
+    width: 20px; /* Adjusted size for smaller icons */
+    height: 20px; /* Adjusted size for smaller icons */
+    display: block;
+}

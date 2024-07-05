@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="BloomBot.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Bot Checkout</title>
+    <link rel="stylesheet" href="checkoutCSS.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="checkoutScript.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bloomBotLogo.png" alt="Bloom Bot Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="cart-item" data-id="1">
+            <img src="bb.jpg" alt="Bloom Bot Image 1">
+            <div class="cart-item-details">
+                <h2 class="cart-item-title">Bloom Bot (Black)</h2>
+                <p class="cart-item-price">$49.99</p>
+                <div class="cart-item-quantity">
+                    <button onclick="updateQuantity('1', -1)">-</button>
+                    <input type="number" id="quantity-1" value="0" min="0" onchange="changeQuantity('1')">
+                    <button onclick="updateQuantity('1', 1)">+</button>
+                </div>
+            </div>
+            <button onclick="removeItem('1')">Remove</button>
+        </div>
+
+        <div class="cart-item" data-id="2">
+            <img src="bb2.jpg" alt="Bloom Bot Image 2">
+            <div class="cart-item-details">
+                <h2 class="cart-item-title">Bloom Bot (White)</h2>
+                <p class="cart-item-price">$49.99</p>
+                <div class="cart-item-quantity">
+                    <button onclick="updateQuantity('2', -1)">-</button>
+                    <input type="number" id="quantity-2" value="0" min="0" onchange="changeQuantity('2')">
+                    <button onclick="updateQuantity('2', 1)">+</button>
+                </div>
+            </div>
+            <button onclick="removeItem('2')">Remove</button>
+        </div>
+
+        <div class="cart-item" data-id="3">
+            <img src="bbhose.jpg" alt="Hose Image">
+            <div class="cart-item-details">
+                <h2 class="cart-item-title"> Automatic Garden Hose</h2>
+                <p class="cart-item-price">$19.99</p>
+                <div class="cart-item-quantity">
+                    <button onclick="updateQuantity('3', -1)">-</button>
+                    <input type="number" id="quantity-3" value="0" min="0" onchange="changeQuantity('3')">
+                    <button onclick="updateQuantity('3', 1)">+</button>
+                </div>
+            </div>
+            <button onclick="removeItem('3')">Remove</button>
+        </div>
+
+        <div class="cart-total">
+            Total: $<span id="total-price">0.00</span>
+        </div>
+
+        <button class="checkout-button" onclick="showCreditCardForm()">Proceed to Checkout</button>
+
+        <form class="credit-card-form" id="credit-card-form">
+            <h2>Enter Credit Card Information</h2>
+            <input type="text" id="card-name" placeholder="Name on Card" required>
+            <input type="text" id="card-number" placeholder="Card Number" required>
+            <input type="text" id="card-expiry" placeholder="Expiry Date (MM/YY)" required>
+            <input type="text" id="card-cvc" placeholder="CVC" required>
+            <button type="submit">Submit Payment</button>
+        </form>
+
+        <div class="thank-you-message" id="thank-you-message">
+            Thank you for your payment!
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://discord.com/invite/plants"><img src="Discord.jpg" alt="Discord"></a>
+                <a href="https://www.reddit.com/r/plants/"><img src="reddit.jpg" alt="Reddit"></a>
+                <a href="https://www.linkedin.com/in/jael-bonilla-1467b5307/"><img src="linkedin1.jpg" alt="LinkedIn"></a>
+            </div>
+            <p>&copy; 2024 Bloom Bot. All rights reserved to LCJ.</p>
+        </div>
+    </footer>
+   
+</body>
+</html>

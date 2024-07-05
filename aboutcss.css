@@ -1,0 +1,402 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    color: #228B22; /* Forest Green */
+    background-image: url('plant.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: transparent;
+    color: #228B22;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto; /* Center the logo */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+   border: 2px solid #196619 ;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    font-size: 35px;
+}
+
+nav ul li a {
+    color: #228B22;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #2d5675;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+.about h2{
+    background-color: red;
+    position: relative;
+    left: 20px; 
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    max-height: 1200px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+   
+}
+
+.carousel {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    position: absolute;
+    transition: opacity 2s ease-in-out;
+}
+
+.carousel img.active {
+    display: block;
+    opacity: 1;
+}
+
+.description, .review {
+    width: 45%;
+}
+
+.description h2, .review h2 {
+    color: #228B22;
+}
+
+.description p, .review p {
+    color: #333;
+}
+
+.review img {
+    width: 70px; /* Larger image */
+    height: 70px; /* Larger image */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+.review {
+    position: relative;
+    text-align: center;
+}
+
+.review .review-text {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: opacity 2s ease-in-out;
+}
+
+.review .review-text.active {
+    display: block;
+    opacity: 1;
+    top: 50%; /* Center the reviews vertically */
+    transform: translateY(-50%);
+}
+
+.review-text p {
+    margin: 0;
+    font-size: 14px; /* Smaller text */
+}
+
+h2 {
+    color: #228B22;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 20px;
+}
+
+.product-details {
+    max-width: 70%; /* Description width */
+}
+
+.product button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px; /* Space between description and button */
+}
+
+.product button:hover {
+    background-color: #196619;
+}
+
+.cute-button {
+    background-color: #40E0D0; /* Light teal background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    padding-left: 20px;
+    position: relative; /* or absolute, depending on your layout needs */
+        /* top: 20px; Adjust this value to move the button vertically */
+        left: 3in;
+}
+
+.cute-button:hover {
+    background-color: #20B2AA; /* Darker teal */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+h3, h2 , li{
+    text-align: center; /* Center align all h3 and h2 headings */
+}
+ul {
+    margin-bottom: 10px;
+    text-align: left; /* Reset text alignment for lists */
+}
+
+.founder {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    text-align: center; /* Center align text */
+}
+
+.founder img {
+    max-width: 100%; /* Ensure the image does not exceed its container's width */
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+form button:hover {
+    background-color: #196619;
+}
+img {
+    width: 80px; /* Set a fixed width */
+    height: 80px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+    display: block; /* Ensures images are displayed as block elements */
+    margin: 0 auto; /* Centers images horizontally within their container */
+}
+.newsletter-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: popupFadeIn 1s ease-in-out;
+    text-align: center;
+    width: 300px; /* Smaller popup */
+}
+
+@keyframes popupFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.newsletter-popup h2 {
+    font-size: 20px;
+    color: #228B22;
+    margin-bottom: 10px;
+}
+
+.newsletter-popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-popup img {
+    width: 60px; /* Smaller image */
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+}
+
+.newsletter-popup input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Smaller font */
+}
+
+.newsletter-popup button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.newsletter-popup button:hover {
+    background-color: #196619;
+}
+
+.close-popup {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 2px 4px; /* Smaller size */
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 5px; /* Adjusted position */
+    right: 5px; /* Adjusted position */
+    font-size: 10px; /* Smaller font size */
+    font-family: 'Roboto Mono', monospace; /* Use Roboto Mono font */
+}
+
+.close-popup:hover {
+    background-color: #d32f2f;
+}
+
+footer {
+    background-color: transparent;
+    color: #228B22;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    border-radius: 50%; /* Make the icons circular */
+    overflow: hidden;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+h2 {
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.founders {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+.founders p {
+    margin-bottom: 10px;
+}
+ul {
+    margin-bottom: 10px;
+}
